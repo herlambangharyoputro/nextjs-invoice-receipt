@@ -1,66 +1,93 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: oklch(100% 0 0);
-  --color-foreground: oklch(9.8% 0.084 285.8);
+  /* Layout Colors */
+  --color-background: #ffffff;
+  --color-foreground: #020817;
   
-  --color-card: oklch(100% 0 0);
-  --color-card-foreground: oklch(9.8% 0.084 285.8);
+  /* Card */
+  --color-card: #ffffff;
+  --color-card-foreground: #020817;
   
-  --color-popover: oklch(100% 0 0);
-  --color-popover-foreground: oklch(9.8% 0.084 285.8);
+  /* Popover */
+  --color-popover: #ffffff;
+  --color-popover-foreground: #020817;
   
-  --color-primary: oklch(11.2% 0.047 285.8);
-  --color-primary-foreground: oklch(98% 0.004 285.8);
+  /* Primary */
+  --color-primary: #0f172a;
+  --color-primary-foreground: #f8fafc;
   
-  --color-secondary: oklch(96.1% 0.004 285.8);
-  --color-secondary-foreground: oklch(11.2% 0.047 285.8);
+  /* Secondary */
+  --color-secondary: #f1f5f9;
+  --color-secondary-foreground: #0f172a;
   
-  --color-muted: oklch(96.1% 0.004 285.8);
-  --color-muted-foreground: oklch(46.9% 0.016 285.8);
+  /* Muted */
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
   
-  --color-accent: oklch(96.1% 0.004 285.8);
-  --color-accent-foreground: oklch(11.2% 0.047 285.8);
+  /* Accent */
+  --color-accent: #f1f5f9;
+  --color-accent-foreground: #0f172a;
   
-  --color-destructive: oklch(60.2% 0.184 29.2);
-  --color-destructive-foreground: oklch(98% 0.004 285.8);
+  /* Destructive */
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #f8fafc;
   
-  --color-border: oklch(91.4% 0.008 285.8);
-  --color-input: oklch(91.4% 0.008 285.8);
-  --color-ring: oklch(9.8% 0.084 285.8);
+  /* Border & Input */
+  --color-border: #e2e8f0;
+  --color-input: #e2e8f0;
+  --color-ring: #020817;
   
-  --radius: 0.5rem;
+  /* Chart Colors */
+  --color-chart-1: #2563eb;
+  --color-chart-2: #16a34a;
+  --color-chart-3: #f59e0b;
+  --color-chart-4: #8b5cf6;
+  --color-chart-5: #ec4899;
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
 }
 
+/* Dark Mode Theme */
 @media (prefers-color-scheme: dark) {
   @theme {
-    --color-background: oklch(9.8% 0.084 285.8);
-    --color-foreground: oklch(98% 0.004 285.8);
+    --color-background: #020817;
+    --color-foreground: #f8fafc;
     
-    --color-card: oklch(9.8% 0.084 285.8);
-    --color-card-foreground: oklch(98% 0.004 285.8);
+    --color-card: #020817;
+    --color-card-foreground: #f8fafc;
     
-    --color-popover: oklch(9.8% 0.084 285.8);
-    --color-popover-foreground: oklch(98% 0.004 285.8);
+    --color-popover: #020817;
+    --color-popover-foreground: #f8fafc;
     
-    --color-primary: oklch(98% 0.004 285.8);
-    --color-primary-foreground: oklch(11.2% 0.047 285.8);
+    --color-primary: #f8fafc;
+    --color-primary-foreground: #0f172a;
     
-    --color-secondary: oklch(17.5% 0.033 285.8);
-    --color-secondary-foreground: oklch(98% 0.004 285.8);
+    --color-secondary: #1e293b;
+    --color-secondary-foreground: #f8fafc;
     
-    --color-muted: oklch(17.5% 0.033 285.8);
-    --color-muted-foreground: oklch(65.1% 0.02 285.8);
+    --color-muted: #1e293b;
+    --color-muted-foreground: #94a3b8;
     
-    --color-accent: oklch(17.5% 0.033 285.8);
-    --color-accent-foreground: oklch(98% 0.004 285.8);
+    --color-accent: #1e293b;
+    --color-accent-foreground: #f8fafc;
     
-    --color-destructive: oklch(30.6% 0.128 29.2);
-    --color-destructive-foreground: oklch(98% 0.004 285.8);
+    --color-destructive: #7f1d1d;
+    --color-destructive-foreground: #f8fafc;
     
-    --color-border: oklch(17.5% 0.033 285.8);
-    --color-input: oklch(17.5% 0.033 285.8);
-    --color-ring: oklch(83.9% 0.027 285.8);
+    --color-border: #1e293b;
+    --color-input: #1e293b;
+    --color-ring: #94a3b8;
+    
+    --color-chart-1: #3b82f6;
+    --color-chart-2: #22c55e;
+    --color-chart-3: #fbbf24;
+    --color-chart-4: #a78bfa;
+    --color-chart-5: #f472b6;
   }
 }
 
@@ -72,5 +99,6 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
